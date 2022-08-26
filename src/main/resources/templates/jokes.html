@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Jokes</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<body>
+<div th:unless="${#lists.isEmpty(jokes)}">
+    <table>
+        <thead>
+        <tr>
+            <th th:align="left">Jokes</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="joke : ${jokes}">
+            <td th:text="${joke.text}"></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
