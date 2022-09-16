@@ -14,7 +14,7 @@ public class SessionInterceptor implements HandlerInterceptor {
 
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) {
-        log.info("preHandle - {} {}, session id is {}.",
+        log.info("preHandle - {} {}, session id is {}",
                 request.getMethod(), request.getRequestURI(), request.getSession().getId());
         return true;
     }

@@ -13,9 +13,8 @@ public class AppInterceptor implements HandlerInterceptor {
 
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) {
-        log.info("preHandle - {} {}", request.getMethod(), request.getRequestURI());
+        log.info("preHandle - {} {} recorded", request.getMethod(), request.getRequestURI());
         return true;
     }
-
 }
 

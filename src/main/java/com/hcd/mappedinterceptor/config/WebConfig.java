@@ -15,11 +15,11 @@ import org.springframework.web.servlet.handler.MappedInterceptor;
 public class WebConfig implements WebMvcConfigurer {
 
     private final AppInterceptor appInterceptor;
-    private final SessionInterceptor webInterceptor;
+    private final SessionInterceptor sessionInterceptor;
 
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
         registry.addInterceptor(appInterceptor);
-        registry.addInterceptor(new MappedInterceptor(null, new String[] {"/api/**"}, webInterceptor));
+        registry.addInterceptor(new MappedInterceptor(null, new String[] {"/api/**"}, sessionInterceptor));
     }
 }
