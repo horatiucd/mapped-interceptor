@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/jokes")
 @Slf4j
 @RequiredArgsConstructor
-public class JokesController {
+class JokesController {
 
     private final JokesService jokesService;
 

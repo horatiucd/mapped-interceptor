@@ -3,6 +3,7 @@ package com.hcd.mappedinterceptor.controller;
 import com.hcd.mappedinterceptor.domain.Joke;
 import com.hcd.mappedinterceptor.service.JokesService;
 import lombok.AllArgsConstructor;
+import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,7 +15,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/jokes")
 @Slf4j
-@AllArgsConstructor
+@RequiredArgsConstructor
 class JokesRestController {
 
     private final JokesService jokesService;
