@@ -6,18 +6,16 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping("/jokes")
 @Slf4j
 @RequiredArgsConstructor
 class JokesController {
 
     private final JokesService jokesService;
 
-    @GetMapping
-    public String getJokes(Model model) {
+    @GetMapping("/jokes")
+    String getJokes(Model model) {
         log.info("getJokes - Render all jokes.");
         model.addAttribute("jokes", jokesService.getJokes());
         return "jokes";
